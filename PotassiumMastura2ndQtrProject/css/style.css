@@ -232,6 +232,7 @@ ul {
 				display: none;
             }
 .sources:hover ol {
+				   transition: display 0.7 s;
 				   display: block;
                   }
 .content2 p {
