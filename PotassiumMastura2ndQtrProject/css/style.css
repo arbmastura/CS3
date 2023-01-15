@@ -26,6 +26,10 @@ header {
 				filter: hue-rotate(90deg);
 				transition: transform 0.9s;
 				transform: rotate(-0.75turn);
+				-webkit-transform: rotate(-0.75turn);
+				-ms-transform: rotate(-0.75turn);
+				-mos-transform: rotate(-0.75turn);
+				-o-transform: rotate(-0.75turn);
 			}
 .title {
 		float: left;
@@ -40,6 +44,10 @@ header {
 .home:hover {
 				transition: transform 0.7s;
 				transform: scale(1.2);
+				-webkit-transform: scale(1.2);
+				-ms-transform: scale(1.2);
+				-mos-transform: scale(1.2);
+				-o-transform: scale(1.2);
 				cursor: pointer;
 			}
 .home:active {
@@ -55,6 +63,10 @@ header {
 .bio:hover {
 				transition: transform 0.7s;
 				transform: scale(1.2);
+				-webkit-transform: scale(1.2);
+				-ms-transform: scale(1.2);
+				-mos-transform: scale(1.2);
+				-o-transform: scale(1.2);
 				cursor: pointer;
 		   }
 .bio:active {
@@ -70,6 +82,10 @@ header {
 .bio2:hover {
 				transition: transform 0.7s;
 				transform: scale(1.2);
+				-webkit-transform: scale(1.2);
+				-ms-transform: scale(1.2);
+				-mos-transform: scale(1.2);
+				-o-transform: scale(1.2);
 				cursor: pointer;
 			}
 .bio2:active {
@@ -84,6 +100,10 @@ header {
 .euk:hover {
 				transition: transform 0.7s;
 				transform: scale(1.2);
+				-webkit-transform: scale(1.2);
+				-ms-transform: scale(1.2);
+				-mos-transform: scale(1.2);
+				-o-transform: scale(1.2);
 				cursor: pointer;
 		   }
 .euk:active {
@@ -98,6 +118,10 @@ header {
 .cell:hover {
 				transition: transform 0.7s;
 				transform: scale(1.2);
+				-webkit-transform: scale(1.2);
+				-ms-transform: scale(1.2);
+				-mos-transform: scale(1.2);
+				-o-transform: scale(1.2);
 				cursor: pointer;
 			}
 .cell:active {
@@ -112,6 +136,10 @@ header {
 .fungi:hover {
 				transition: transform 0.7s;
 				transform: scale(1.2);
+				-webkit-transform: scale(1.2);
+				-ms-transform: scale(1.2);
+				-mos-transform: scale(1.2);
+				-o-transform: scale(1.2);
 				cursor: pointer;
 			 }
 .fungi:active {
@@ -204,6 +232,7 @@ ul {
 				float: right;
 				position: relative;
 				width: 50%;
+				border-radius: 15px;
              }
 .quote {
 		text-align: center;
@@ -315,12 +344,21 @@ ul {
        }
 .video1 {
 			padding-top:50px;
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
         }
 .video2 {
 			padding-top: 50px;
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
         }
 .video3 {
 			padding-top: 50px;
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
         }
 footer {
 		background-color: rgb(176,224,230);
