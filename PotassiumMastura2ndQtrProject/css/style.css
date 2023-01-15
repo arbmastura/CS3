@@ -4,7 +4,7 @@
   }
 body {
 		font-family: "Garamond", serif;
-  }
+     }
 header {
 		background-color: rgb(176,224,230);
 		font-size: 25px;
@@ -21,7 +21,7 @@ header {
 	z-index: 4;
 	width: 80px;
 	height: 80px;
-	   }
+       }
 .logo:hover {
 				filter: hue-rotate(90deg);
 				transition: transform 0.9s;
@@ -30,17 +30,17 @@ header {
 				-ms-transform: rotate(-0.75turn);
 				-mos-transform: rotate(-0.75turn);
 				-o-transform: rotate(-0.75turn);
-			}
+	    }
 .title {
 		float: left;
 	}
 .home {
 		margin: 0px 35px 0px 150px;
 		float: text;
-	  }
+      }
 .home:visited {
 				transform: rotate(-0.25turn);
-			  }
+	      }
 .home:hover {
 				transition: transform 0.7s;
 				transform: scale(1.2);
@@ -49,17 +49,17 @@ header {
 				-mos-transform: scale(1.2);
 				-o-transform: scale(1.2);
 				cursor: pointer;
-			}
+	     }
 .home:active {
 				filter: hue-rotate(90deg);
-			 }
+	     }
 .bio {
 		margin: 0px 35px 0px 35px;
 		float: text;
-	  }
+     }
 .bio:visited {
 				transform: rotate(-0.25turn);
-			 }
+	     }
 .bio:hover {
 				transition: transform 0.7s;
 				transform: scale(1.2);
@@ -68,17 +68,17 @@ header {
 				-mos-transform: scale(1.2);
 				-o-transform: scale(1.2);
 				cursor: pointer;
-		   }
+	    }
 .bio:active {
 				filter: hue-rotate(90deg);
-			}
+	    }
 .bio2 {
 		margin: 0px 35px 0px 150px;
 		float: text;
-	  }
+      }
 .bio2:visited {
 				transform: rotate(-0.25turn);
-			  }
+	      }
 .bio2:hover {
 				transition: transform 0.7s;
 				transform: scale(1.2);
@@ -87,16 +87,16 @@ header {
 				-mos-transform: scale(1.2);
 				-o-transform: scale(1.2);
 				cursor: pointer;
-			}
+	    }
 .bio2:active {
 				filter: hue-rotate(90deg);
-			 }
+	     }
 .euk {
 		margin: 0px 35px 0px 35px;
-	 }
+     }
 .euk:visited {
 				transform: rotate(-0.25turn);
-			 }
+	     }
 .euk:hover {
 				transition: transform 0.7s;
 				transform: scale(1.2);
@@ -193,23 +193,23 @@ article {
             margin-right: 12.5%;
             margin-left: 12.5%;
             padding-top: 15px 15px 35px 15px;
-			width: 75%;
-		}
+	    width: 75%;
+	}
 section h3 {
 			text-align: center;
 			text-shadow: 10px 10px 10px 10px;
 			font-size: 40px;
 			padding-top: 35px;
 			padding-bottom: 25px;
-			}
+	    }
 section h4 {
 				font-size: 30px;
 				padding-bottom: 5px;
-			}
+	   }
 section p {
 			font-size: 25px;
 			text-indent: 20px;
-		  }
+          }
 hr {
 	margin-left: 5%;
 	margin-right: 5%;
@@ -344,12 +344,21 @@ ul {
        }
 .video1 {
 			padding-top:50px;
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
         }
 .video2 {
 			padding-top: 50px;
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
         }
 .video3 {
 			padding-top: 50px;
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
         }
 footer {
 		background-color: rgb(176,224,230);
@@ -363,4 +372,4 @@ footer {
 		clear: both;
 		width: 100%;
 		bottom: 0;
-		}
+	}
