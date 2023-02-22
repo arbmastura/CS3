@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		*{
+			text-align: center;
+		}
+		
+		#pic {
+			padding-top:60px;
+		}
+	</style>
+</head>
+<body>
+	<button onclick="image()">Display New Image</button>
+	<button onclick="image2()">Display Old Image</button>
+	<div style="padding: 10px">
+		<center><img id="pic" src="images/first.img" height="500px" width="800px"></center>
+	</div>
+	<script>
+		function image() {
+			document.getElementById("pic").src = "images/second.jfif";
+		}
+		function image2() {
+			document.getElementById("pic").src = "images/first.img";
+		}
+	</script>
+</body>
+</html>
