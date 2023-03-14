@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+
+<body>
+
+	<script>
+		var str = Math.floor(Math.random() * 1001);
+		var st = str.toString();
+		var s = st.length;
+		var o;
+		var t;
+		var h;
+
+		if (s == 3) {
+			o = st[2];
+			t = st[1] * 10;
+			h = st[0] * 100;
+		} else if (s == 2) {
+			o = s[1];
+			t = s[0] * 10;
+			h = 0
+		} else { 
+			o = s[0];
+			t = 0;
+			h = 0;
+		}
+		
+		document.write("Randomly generated number: " + st + "<br><br><br>");
+		document.write("Breakdown: " + h + ", " + t + ", " + o);
+	</script>
+
+</body>
+</html>
