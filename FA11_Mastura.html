@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+	<script>
+		var a = prompt("Enter first number: ", "");
+		var b = prompt("Enter second number: ", "");
+		var c = prompt ("Enter third number: ", "");
+
+		determineTriangle(a, b, c);
+
+		function determineTriangle(a, b, c) {
+			if (a == b == c) {
+				alert("The triangle is EQUILATERAL");
+			} else if (a == b != c) {
+				alert("The triangle is ISOSCELES");
+			} else if (a != b == c) {
+				alert("The triangle is ISOSCELES");
+			} else if (a == c != b) {
+				alert("The triangle is ISOSCELES");
+			} else {
+				alert("The triangle is SCALENE");
+			}
+		}
+	</script>
+	
+</body>
+</html>
