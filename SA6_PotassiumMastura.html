@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>One Time Password </title>
+		<!-- provide the necessary meta tags -->
+		<meta charset="UTF-8">
+		<meta name="description" content="One Time Password">
+		<meta name="keywords" content="otp, password, one-time password">
+		<meta name="author" content="Alisha Raniyah Mastura">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+        <style>
+        	body {background: lightblue; 
+            	text-align: center;
+            	font-family: arial;
+                color: navy;
+            }
+            button {padding: 10px; background:violet }
+            a {font-size: 0.5em; color: maroon}
+        </style>
+
+	</head>
+<body onload="display()">
+	<h1> Final Verification Step </h1>
+	<h2> Current OTP: <span id="otp"> _ _ _ _ _ _ <span> <a href=""> New OTP </a></h2>
+    <button onclick="userOTP()"> Enter the OTP as shown above </button>
+    
+    <script>
+    	/* do not forget to include comments in your answer */
+		
+		var x;
+		
+		function display() { //function to generate otp
+			x = (Math.floor(10000 + Math.random() * 900000)); //generate a 6-digit number
+			document.getElementById("otp").innerHTML = x; //displays number in otp
+		}
+		
+		function b() { //calls function to display otp
+			display();
+		}
+		
+		function userOTP() {
+			var userInput = prompt("Enter OTP: ", ""); //prompts user to enter correct otp
+			
+			if (userInput == x) { //if correct otp entered by user
+				window.open("https://open.spotify.com/?"); //redirects to website
+			} else {
+				alert("OTP entered does not match"); //alerts error of user
+			}
+			
+		}	
+    </script>
+</body>
+</html>
+
