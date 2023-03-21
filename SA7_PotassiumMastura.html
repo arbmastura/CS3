@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Numerology</title>
+		<!-- provide the necessary meta tags -->
+		<meta charset="UTF-8">
+		<meta name="description" content="Your fortune is in your name">
+		<meta name="keywords" content="fortune, numerology, luck, fate, destiny, name">
+		<meta name="author" content="Alisha Raniyah Mastura">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+        <style>
+        	body {background: lightblue; 
+            	text-align: center;
+            	font-family: arial;
+                color: navy;
+            }
+            button {padding: 10px; background:violet }
+            span {font-size: 0.5em; color: maroon}
+        </style>
+
+	</head>
+<body>
+	<h1> Your Fortune is in your name </h1>
+	<h2> Your Name is: <span id="thename"> </span></h2>
+    <h2> Today's fortune: <span id="fortune"> </span></h2>
+    
+    <button> Click here to enter your name </button>
+     <script>
+    	/* do not forget to include comments in your answer */
+		/*prompt and innerHTML are used to ask the user's name which is displayed in the id tag*/
+		var userName = prompt("Enter full name: ", "");
+		document.getElementById("thename").innerHTML = userName;
+		
+		/*length operation is used to get the length or fortune
+		i is used for conditions in the for loop
+		the value of digitSum is dependent on the operations*/
+		var nameLength = userName.length;
+		var i;
+		var digitSum = 0;
+		
+		/*the conditions are to ensure a single digit 
+		the value of nameLength divided by 10 is rounded down
+		the remainder of the value is expressed to digitSum*/
+		for (i = 0; i < 9; i++) { 
+			digitSum += nameLength % 10;
+			nameLength = Math.floor(nameLength / 10);
+		}
+		/*the switch applies to the digitSum
+		each case corresponds to a hypothetical sum of digits
+		the equivalent fortune is displayed in the fortune tag*/
+		switch(digitSum) {
+			case 0:
+				document.getElementById("fortune").innerHTML = "You have a good day ahead";
+				break;
+			case 1:
+				document.getElementById("fortune").innerHTML = "You have a bad day ahead";
+				break;
+			case 2:
+				document.getElementById("fortune").innerHTML = "You will pass your exams";
+				break;
+			case 3:
+				document.getElementById("fortune").innerHTML = "You will fail your exams";
+				break;
+			case 4:
+				document.getElementById("fortune").innerHTML = "You will have a good week";
+				break;
+			case 5:
+				document.getElementById("fortune").innerHTML = "You will have a bad week";
+				break;
+			case 6:
+				document.getElementById("fortune").innerHTML = "You will get bad grades";
+				break;
+			case 7:
+				document.getElementById("fortune").innerHTML = "You will get good grades";
+				break;
+			case 8:
+				document.getElementById("fortune").innerHTML = "You will be on the Director's List";
+				break;
+			case 9:
+				document.getElementById("fortune").innerHTML = "You will not be on the Director's List";
+				break;
+			default:
+				alert("No fortune");
+		}
+				
+    </script>
+    
+</body>
+</html>
+
