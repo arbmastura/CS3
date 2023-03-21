@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Choose Background Color</title>
+		<!-- provide the necessary meta tags -->
+		<meta charset="UTF-8">
+		<meta name="description" content="Choose Background Color">
+		<meta name="keywords" content="background color, color">
+		<meta name="author" content="Alisha Raniyah Mastura">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+        	* { box-sizing: border-box; 
+            	font-family: arial; 
+                color: white;
+            }           
+            body {background:navy}
+            ul {
+            	list-style-type: none;
+                width: 100px;
+                padding: 0;
+                border: 1px solid black;
+                background: gray;
+            }
+            li {width: 100%;
+            	border-bottom: 1px solid black;
+                padding: 5px;
+            }
+            li:nth-child(3) {border:none}
+            a {	text-decoration:none;
+            	display:block;
+                width: 100%;
+            }
+            li:nth-child(1):hover {background:purple}
+            li:nth-child(2):hover {background:navy}
+            li:nth-child(3):hover {background:maroon}
+            
+        </style>
+
+	</head>
+	<body>
+		<h2> Choose Background Color </h2>
+        <ul>
+        	<li onclick="purple()"><a href="#"> Purple </a></li> <!--onclick added to call function--> 
+            <li onclick="navy()"><a href="#"> Navy </a></li>
+            <li onclick="maroon()"><a href="#"> Maroon </a></li>
+        </ul>
+		
+
+        <script>
+            /* do not forget to include comments to this script */
+           
+			function purple() {
+				document.body.style.background = "purple"; //changes color in background under body in the internal stylesheet
+			}
+			
+			function navy() {
+				document.body.style.background = "navy";
+			}
+			
+			function maroon() {
+				document.body.style.background = "maroon";
+			}
+				
+
+        </script>
+	</body>
+</html>
+
