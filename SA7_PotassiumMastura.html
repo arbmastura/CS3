@@ -25,36 +25,31 @@
 	<h2> Your Name is: <span id="thename"> </span></h2>
     <h2> Today's fortune: <span id="fortune"> </span></h2>
     
-    <button onclick="display()"> Click here to enter your name </button>
+    <button onclick="display()"> Click here to enter your name </button> <!--onclick is added to allow button use-->
      <script>
     	/* do not forget to include comments in your answer */
-		/*prompt and innerHTML are used to ask the user's name which is displayed in the id tag*/
-	        function display() {
-			var userName = prompt("Enter full name: ", "");
-			document.getElementById("thename").innerHTML = userName;
+		
+	        function display() { 
+			var userName = prompt("Enter full name: ", ""); //prompt asks user to input name when button is clicked
+			document.getElementById("thename").innerHTML = userName; //innerHTML displays the name in the id tag
 		}
 	     
 	        function b() {
-			display();
+			display(); //calls to the function to allow appropriate cue
 		}
 	     
 		var nameLength = userName.length; //length operation is used to get the length or fortune
 		var i; //i is used for loop conditions
 		var digitSum = 0; //the value of digitSum is dependent on the operations
 		
-		/*the conditions are to ensure a single digit 
-		the value of nameLength divided by 10 is rounded down
-		the remainder of the value is expressed to digitSum*/
-		for (i = 0; i < 9; i++) { 
-			digitSum += nameLength % 10;
-			nameLength = Math.floor(nameLength / 10);
+		for (i = 0; i < 9; i++) { //loop conditions ensure a single digit 
+			digitSum += nameLength % 10; //remainder of value is expressed to digitSum through modulus
+			nameLength = Math.floor(nameLength / 10); //value of nameLength divided by 10 is rounded down
 		}
-		/*the switch applies to the digitSum
-		each case corresponds to a hypothetical sum of digits
-		the equivalent fortune is displayed in the fortune tag*/
-		switch(digitSum) {
-			case 0:
-				document.getElementById("fortune").innerHTML = "You have a good day ahead";
+	     
+		switch(digitSum) { //switch applies to digit sum
+			case 0: //each case corresponds to a respective sum of digits
+				document.getElementById("fortune").innerHTML = "You have a good day ahead"; //equivalent fortune is displayed in fortune tag
 				break;
 			case 1:
 				document.getElementById("fortune").innerHTML = "You have a bad day ahead";
