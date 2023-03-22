@@ -25,19 +25,22 @@
 	<h2> Your Name is: <span id="thename"> </span></h2>
     <h2> Today's fortune: <span id="fortune"> </span></h2>
     
-    <button> Click here to enter your name </button>
+    <button onclick="display()"> Click here to enter your name </button>
      <script>
     	/* do not forget to include comments in your answer */
 		/*prompt and innerHTML are used to ask the user's name which is displayed in the id tag*/
-		var userName = prompt("Enter full name: ", "");
-		document.getElementById("thename").innerHTML = userName;
-		
-		/*length operation is used to get the length or fortune
-		i is used for conditions in the for loop
-		the value of digitSum is dependent on the operations*/
-		var nameLength = userName.length;
-		var i;
-		var digitSum = 0;
+	        function display() {
+			var userName = prompt("Enter full name: ", "");
+			document.getElementById("thename").innerHTML = userName;
+		}
+	     
+	        function b() {
+			display();
+		}
+	     
+		var nameLength = userName.length; //length operation is used to get the length or fortune
+		var i; //i is used for loop conditions
+		var digitSum = 0; //the value of digitSum is dependent on the operations
 		
 		/*the conditions are to ensure a single digit 
 		the value of nameLength divided by 10 is rounded down
