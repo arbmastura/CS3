@@ -25,18 +25,12 @@
 	<h2> Your Name is: <span id="thename"> </span></h2>
     <h2> Today's fortune: <span id="fortune"> </span></h2>
     
-    <button onclick="display()"> Click here to enter your name </button> <!--onclick is added to allow button use-->
+    <button> Click here to enter your name </button> <!--onclick is added to allow button use-->
      <script>
     	/* do not forget to include comments in your answer */
-		
-	        function display() { 
-			var userName = prompt("Enter full name: ", ""); //prompt asks user to input name when button is clicked
-			document.getElementById("thename").innerHTML = userName; //innerHTML displays the name in the id tag
-		}
-	     
-	        function b() {
-			display(); //calls to the function to allow appropriate cue
-		}
+
+		var userName = prompt("Enter full name: ", ""); //prompt asks user to input name when button is clicked
+		document.getElementById("thename").innerHTML = userName; //innerHTML displays the name in the id tag
 	     
 		var nameLength = userName.length; //length operation is used to get the length or fortune
 		var i; //i is used for loop conditions
