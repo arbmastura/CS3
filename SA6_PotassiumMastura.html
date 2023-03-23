@@ -22,30 +22,28 @@
 	</head>
 <body onload="display()">
 	<h1> Final Verification Step </h1>
-	<h2> Current OTP: <span id="otp"> _ _ _ _ _ _ <span> <a href=""> New OTP </a></h2>
+	<h2> Current OTP: <span id="otp"> _ _ _ _ _ _ </span> <a href="" onclick="secondOTP()"> New OTP </a></h2>
     <button onclick="userOTP()"> Enter the OTP as shown above </button>
     
     <script>
     	/* do not forget to include comments in your answer */
 		
-		var x;
+	        var x = (Math.floor(Math.random() * 900000) + 100000); //randomly generates password
+                document.getElementById("otp").innerHTML = x; //password displayed in id tag
 		
-		function display() { //function to generate otp
-			x = (Math.floor(10000 + Math.random() * 900000)); //generate a 6-digit number
-			document.getElementById("otp").innerHTML = x; //displays number in otp
-		}
-		
-		function b() { //calls function to display otp
-			display();
-		}
+	    	function secondOTP() { //to produce new otp by clicking
+                	x = (Math.floor(Math.random() * 900000) + 100000); //new password generation
+                	document.getElementById("otp").innerHTML = x; //new password is displayed in tag
+                }
 		
 		function userOTP() {
 			var userInput = prompt("Enter OTP: ", ""); //prompts user to enter correct otp
 			
-			if (userInput == x) { //if correct otp entered by user
+			if (userInput == y) { //if correct otp entered by user
 				window.open("https://open.spotify.com/?"); //redirects to website
 			} else {
 				alert("OTP entered does not match"); //alerts error of user
+			secondOTP(); //reiterate new password
 			}
 			
 		}	
