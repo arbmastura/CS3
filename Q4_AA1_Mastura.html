@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Q4_AA1_Mastura</title>
+	</head>
+
+	<body>
+  		<script>
+			let input = prompt("Enter mRNA sequence:")
+			input.toUpperCase();
+			let index = input.indexOf("AUG");
+
+			if (index < 0) {
+  				alert("invalid codon");
+			} 
+
+			else{
+				let codon = [];
+
+				for (index; index < input.length; index += 3) {
+  					let cod = input.slice(index, index+3);
+					codon.push(cod);
+
+					if (cod == "UAA" || cod == "UAG" || cod == "UGA") {
+      					document.write(cod + " --> STOP" + "<br>");
+						break;
+    					} 
+
+
+					else {
+      					let c;
+      					switch(cod) {
+      					  case "AUG":
+        					  c = "met";
+        					  break;
+      					  case "UUU":
+      					  case "UUC":
+        					  c = "phe";
+        					  break;
+      					  case "UUA":
+      					  case "UUG":
+      					  case "CUU":
+      					  case "CUC":
+      					  case "CUA":
+      					  case "CUG":
+        					  c = "leu";
+        					  break;
+						  case "UCU":
+      					  case "UCC":
+      					  case "UCA":
+      					  case "UCG":
+      					  case "AGU":
+      					  case "AGC":
+        					  c = "ser";
+        					  break;
+      					  case "AUU":
+      					  case "AUC":
+      					  case "AUA":
+        					  c = "ile";
+        					  break;
+      					  case "GUU":
+      					  case "GUC":
+      					  case "GUA":
+      					  case "GUG":
+        					  c = "val";
+        					  break;
+      					  case "CCU":
+      					  case "CCC":
+      					  case "CCA":
+      					  case "CCG":
+        					  c = "pro";
+        					  break;
+      					  case "ACU":
+      					  case "ACC":
+      					  case "ACA":
+      					  case "ACG":
+        					  c = "thr";
+        					  break;
+      					  case "GCU":
+      					  case "GCC":
+      					  case "GCA":
+      					  case "GCG":
+        					  c = "ala";
+        					  break;
+      					  case "UAU":
+      					  case "UAC":
+        					  c = "tyr";
+        					  break;
+      					  case "CAU":
+      					  case "CAC":
+        					  c = "his";
+        					  break;
+      					  case "CAA":
+      					  case "CAG":
+        					  c = "gln";
+        					  break;
+      					  case "AAU":
+      					  case "AAC":
+        					  c = "asn";
+        					  break;
+      					  case "AAA":
+      					  case "AAG":
+        					  c = "lys";
+        					  break;
+      					  case "GAU":
+      					  case "GAC":
+							  c = "asp";
+        				  case "UGU":
+      					  case "UGC":
+							  c = "cys";
+						  case "GAA":
+      					  case "GAG":
+							  c = "glu";
+						  case "UGG":
+							  c = "trp";
+						  case "CGU":
+      					  case "GGC":
+						  case "GGA":
+						  case "GGG":
+						  case "AGG":
+							  c = "arg";
+						  case "GGU":
+      					  case "GGC":
+						  case "GGA":
+						  case "GGG":
+							  c = "gly";
+						}
+						
+						document.write(cod + " --> " + c + "<br>");
+    					}
+				}
+				document.write("[" + codon.map(function(element) { return "'" + element + "'"; }).join(", ") + "]");
+
+			}
+		</script>
+		
+		<footer>Copyright © 2023 by Alisha Raniyah Mastura</footer>
+		
+	</body>
+</html>
