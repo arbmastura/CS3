@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>FA14_Mastura</title>
+		<style>
+			* {
+				overflow: auto;
+				box-sizing: border-box;
+			}
+			body {
+				
+				background-image: linear-gradient(rgb(245,245,220), rgb(250,235,215));
+				font-family: "Garamond", serif;
+			}
+			form {
+				
+				font-family: "Garamond", serif;
+				text-align: center;
+				padding: 90px 25px 25px 25px;
+			}
+			fieldset {
+						border-style: double;
+						border-width: 8px;
+						margin-left: 170px;
+						margin-right: 170px;
+						background-color: rgb(173,216,230);
+						border-color: rgb(250,235,215);
+			}
+			legend {
+					font-size: 60px;
+					font-style: italic;
+					color: rgb(184,134,11);
+					margin-bottom: 80px;
+					border-style: outset;
+					border-width: 5px;
+					border-color: rgb(255,228,196);
+					padding: 15px;
+					background-color: rgb(240,248,255);
+			}
+			legend:hover {
+							filter: hue-rotate(90deg);
+			}
+			input { 
+					font-size: 25px;
+					font-style: "Garamond", serif;
+					border-color: rgb(255,250,205);
+					border-radius: 15px;
+					border-style: ridge;
+					border-width: 4px;
+					margin-bottom: 15px;
+					margin-top: 5px;
+			}	
+			label {
+					margin-top: 15px;
+					margin-bottom: 15px;
+					padding-bottom: 5px;
+					padding-top: 10px;
+					font-size: 25px;
+					font-color: rgb(222,184,135);
+			}
+			#name, #pname, #gender, #email, #address, #int {
+															padding: 10px;
+															margin-bottom: 15px;
+			}
+			textarea {
+						border-radius: 15px;
+						border-color: rgb(255,250,205);
+						border-radius: 15px;
+						border-style: ridge;
+						border-width: 4px;
+			}
+			#submit:hover {
+							filter: hue-rotate(90deg);
+			}
+			#reset:hover {
+							filter: hue-rotate(90deg);
+			}
+			div {
+				border-style: double;
+				border-width: 8px;
+				border-color: rgb(250,235,215);
+				margin-left: 200px;
+				margin-right: 200px;
+				margin-top: 100px;
+				background-color: rgb(173,216,230);
+				border-color: rgb(250,235,215);
+			}
+			h3 {
+				text-align: center;
+				font-size: 30px;
+				font-style: italic;
+				color: rgb(222,184,135);
+				margin-bottom: 80px;
+				margin-right: 25%;;
+				margin-left: 25%;
+				border-style: outset;
+				border-width: 5px;
+				border-color: rgb(255,228,196);
+				padding: 15px;
+				background-color: rgb(240,248,255);
+			}
+			h3:hover {
+						filter: hue-rotate(90deg);
+			}
+			#output {
+				text-align: center;
+				font-size: 25px;
+				color: rgb(255,240,245);
+				padding-bottom: 25px;
+			}
+			footer {
+				background-color: rgb(176,224,230);
+				color: rgb(222,184,135);
+				font-family: Garamond;
+				font-style: italic;
+				text-align: center;
+				font-size: 15px;
+				margin-top: 180px;
+				padding: 15px;
+				clear: both;
+				width: 100%;
+				bottom: 0;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<form method="post" onsubmit="return sub();">
+			<fieldset>
+			<legend>About You</legend>
+				<label for="name">Name</label><br>
+				<input type="text" id="name" name="name" onfocus="focusFunc(this)" onblur="blurFunc(this)"><br>
+				<label for="pname">Preferred Name</label><br>
+				<input type="text" id="pname" name="pname" onfocus="focusFunc(this)" onblur="blurFunc(this)"><br>
+				<label for="gender">Gender</label><br>
+				<select id="gender" name="gender">
+					<option value="Male">Male</option>
+					<option value="Female">Female</option>
+					<option value="Prefer not to say">Prefer not to say</option>
+				</select><br>
+				<label for="password">Password</label><br>
+				<input type="password" id="password" name="password" onfocus="focusFunc(this)" onblur="blurFunc(this)"><br>
+				<label for="email">Email Address</label><br>
+				<input type="email" id="email" name="email" onfocus="focusFunc(this)" onblur="blurFunc(this)"><br>
+				<label for="int">Tell us about your interests!</label><br>
+				<textarea id="int" name="int" rows="9" cols="60" onfocus="focusFunc(this)" onblur="blurFunc(this)">
+				</textarea><br>
+				<input type="submit" value="Submit" id="submit">
+				<input type="reset" onclick="resetFunc()">
+			</fieldset>
+		</form>
+		
+		<div>
+			<h3>Here's what we received:</h3>
+			<p id="output"></p>
+		</div>
+		
+		<footer>
+			Copyright © 2023 by Alisha Raniyah Mastura
+		</footer>
+		
+		<script>
+			function blurFunc(input) {
+				if(input.value !== "") {
+					input.style.border = "2px solid green";
+					return false;
+				} 
+				
+				else { 
+					input.style.border = "2px solid red";
+					return true;
+				}
+			}
+			
+			function focusFunc(input) {
+				if (input.value !== "") {
+					input.style.border = "2px solid green";
+					return false;
+				}
+			}
+			
+			function sub(){
+				var n = document.getElementById("name").value;
+				var pn = document.getElementById("pname").value;
+				var g = document.getElementById("gender").value;
+				var p = document.getElementById("password").value;
+				var e = document.getElementById("email").value;
+				var i = document.getElementById("int").value;
+				
+				document.getElementById("output").innerHTML = "Name: " + n + "<br>" + "Preferred Name: " + pn + "<br>" + "Gender: " + g + "<br>" + "Password: " + p + "<br>" + "Email: " + e + "<br>" + "About You: " + i;
+				return false;
+			}
+			
+			function resetFunc() {
+				document.getElementById("output").innerHTML = " ";
+			}
+		</script>
+	</body>
+</html>
