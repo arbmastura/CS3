@@ -142,6 +142,8 @@
 				<input type="password" id="password" name="password" onfocus="focusFunc(this)" onblur="blurFunc(this)"><br>
 				<label for="email">Email Address</label><br>
 				<input type="email" id="email" name="email" onfocus="focusFunc(this)" onblur="blurFunc(this)"><br>
+				<label for="address">Address</label><br>
+				<input type="text" id="address" name="address" onfocus="focusFunc(this)" onblur="blurFunc(this)"><br>
 				<label for="int">Tell us about your interests!</label><br>
 				<textarea id="int" name="int" rows="9" cols="60" onfocus="focusFunc(this)" onblur="blurFunc(this)">
 				</textarea><br>
@@ -185,9 +187,10 @@
 				var g = document.getElementById("gender").value;
 				var p = document.getElementById("password").value;
 				var e = document.getElementById("email").value;
+				var a = document.getElementById("address").value;
 				var i = document.getElementById("int").value;
 				
-				document.getElementById("output").innerHTML = "Name: " + n + "<br>" + "Preferred Name: " + pn + "<br>" + "Gender: " + g + "<br>" + "Password: " + p + "<br>" + "Email: " + e + "<br>" + "About You: " + i;
+				document.getElementById("output").innerHTML = "Name: " + n + "<br>" + "Preferred Name: " + pn + "<br>" + "Gender: " + g + "<br>" + "Password: " + p + "<br>" + "Email: " + e + "<br>" + "Address: " + a + "<br>" + "About You: " + i;
 				return false;
 			}
 			
